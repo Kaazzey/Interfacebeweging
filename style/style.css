@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+#body {
+  
+}
+
+.body1 {
+    background-color: #736454;
+    height: 100%;
+    width: 100%;
+}
+
+.body2 {
+    background-color: #0d1e33;
+    height: 100%;
+    width: 100%;
+}
+
+.body3 {
+    background-color: #6bbadb;
+    height: 100%;
+    width: 100%;
+}
+
+#video {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    z-index: 1;
+}
+
+#transistion {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    pointer-events: none;
+    background-color: #573f30;
+    opacity: 0%;
+}
+
+#transistion.animated {
+    animation: video-animatie 1.5s ease;
+  }
+
+@keyframes video-animatie {
+  0%   { opacity: 0%; }
+  50%  { opacity: 100%; }
+  100% { opacity: 0%; }
+}
+
+.startscherm {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    pointer-events: none;
+    background-color: #678bed;
+    opacity: 0;
+    animation: fade-out 2s 1 ease;
+}
+
+#startschermvideo {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    z-index: 1;
+}
+
+@keyframes fade-out {
+    0%   { opacity: 100%; }
+    75%  { opacity: 100%; }
+    100% { opacity: 0%; }
+  }
+
+.flex {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    /* top: -3rem; */
+    z-index: 2;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 1em;
+    border-radius: 1rem;
+    
+    background-color: #dcbda8;
+}
+
+.btns img {
+    width: 6rem;
+    height: 6rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    margin: 0 30px;
+    border: 5px solid #573f30;
+    border-radius: 5rem;
+    animation: knop-animatie 1.2s 1;
+}
+
+  /* @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
+@keyframes knop-animatie {
+  0%   { opacity: 0%; margin: 0px}
+  50%   { opacity: 0%; margin: 0px}
+  100% { opacity: 100%; margin: 0 30px}
+} */
+
+.btns img:hover{
+    transform: scale(1.1);   
+    border: 5px solid #a89080;
+}
